@@ -63,11 +63,15 @@ git add .; git commit -m 'update'; git push origin master
 - `_config.yml` から `theme: minima` を削る。
 - 動作確認をローカルで行いながら、HTMLやCSSを編集する。
 
-## 所感
+## 雑感
 
 - テーマいじりはAtomが便利
 - minimaデフォルトから要らないものを削ったらイイ感じになった
   - 本リポジトリのコミットログを参照のこと
+- やったこと
+  - フッタを2カラムにした
+  - ヘッダからAboutを削った
+  - ホームから細々としたものを削った
 
 ## 参考文献
 
