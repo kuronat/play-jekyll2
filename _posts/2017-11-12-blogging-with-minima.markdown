@@ -49,6 +49,17 @@ pushする。
 git add .; git commit -m 'update'; git push origin master
 ```
 
+これで、Project siteとしてJekyllブログが作成された。
+
+## minimaテーマの編集
+
+```
+open $(bundle show minima)
+```
+
+の内容をリポジトリのディレクトリにコピーする。
+
+
 ## 参考文献
 
 1. [Github Pagesで独自ドメイン+プライベートリポジトリもおｋ](http://sonson.jp/blog/2015/01/17/githubpages/)
