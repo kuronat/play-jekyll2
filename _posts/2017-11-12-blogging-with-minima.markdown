@@ -22,7 +22,7 @@ jekyll new play-jekyll2
 cd play-jekyll2
 ```
 
-Gitリポジトリにし、GitHubにも作成しておく。
+`play-jekyll2` ディレクトリをGitリポジトリにし、GitHubにも作成しておく。
 
 ```
 git init
