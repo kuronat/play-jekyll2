@@ -19,12 +19,11 @@ description: >-
   (Ｔ),Black Lotusを生け贄に捧げる：あなたのマナ・プールに、好きな色１色のマナ３点を加える。
 baseurl: /play-jekyll2 # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: kuronat
-github_username:  _kuronat
+twitter_username: _kuronat
+github_username: kuronat
 
 # Build settings
 markdown: kramdown
-theme: minima
 plugins:
   - jekyll-feed
 

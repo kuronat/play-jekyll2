@@ -1,64 +1,72 @@
 ---
 layout: post
-title:  Jekyll(minimaテーマ)によるGiHub Pages
+title:  GiHub PagesによるJekyllブログをProject siteとして作る
 date:   2017-11-12 00:49:12 +0900
 ---
 
 ## はじめに
-GitHub PagesはHTMLコンテンツ(またはJekyll)をリポジトリ内に設置すると、GitHubで静的サイトを公開できるというGitHubの機能である。
+GitHub Pagesは、リポジトリ内にHTMLコンテンツ(またはJekyllプロジェクト)を設置すると静的サイトを公開できるという、GitHubのいち機能である。
 
 - `yourid.github.io` リポジトリで用意したGitHub Pagesは `http://yourid.github.io` に公開される。ここで `http://yourid.github.io` をUser siteと呼ぶ。
 - `yourid/reponame` リポジトリで用意したGitHub Pagesは `http://yourid.github.io/reponame` に公開される。ここで `http://yourid.github.io/reponame` を `yourid/reponame` のProject siteと呼ぶ。
 
-今回は Project site としてJekyllブログを作成してみる。
+今回は Project site としてJekyllでブログを作成してみる。
 テーマとしてはデフォルトのminimaを用いる。
 
-## 手順
+## 作業手順
 
-雛形を生成する。
+まず、雛形を生成する。
 
 ```
 jekyll new play-jekyll2
 cd play-jekyll2
 ```
 
-`play-jekyll2` ディレクトリをGitリポジトリにし、GitHubにも作成しておく。
+`play-jekyll2` ディレクトリをGitリポジトリとして`init`し、GitHubにも作成しておこう。
 
 ```
 git init
 hub create
 ```
 
-動作確認
+ブラウザで動作確認する。ポートは4000番。
 
 ```
 bundle exec jekyll serve
 ```
 
-## サブパスを設定しpush
+## サブパスを設定
 
-User siteならば何もせずpushしてしまえば良いが、Project siteの場合、 `_config.yml` で `baseurl:` の設定が必要である。
+User siteならばこの時点で何もせずpushしてしまえば良い。だがProject siteの場合は、それではURLのパスがずれてしまう。
+
+Project siteの場合、`_config.yml` で `baseurl:` の設定を行えばよい。
 
 ```
 baseurl: /play-jekyll2
 ```
 
-pushする。
+## push
+
+あらかじめGitHubリポジトリの設定で、GitHub Pagesを有効化する(今回はmasterブランチとして有効化した)。
+リポジトリにコミットされるごとに、JekyllのビルドをGitHub側が行ってくれて便利である。
 
 ```
 git add .; git commit -m 'update'; git push origin master
 ```
 
-これで、Project siteとしてJekyllブログが作成された。
+しばし待てば[Project site](https://kuronat.github.io/play-jekyll2/)にJekyllブログが作成されたことが確認できるだろう。
 
-## minimaテーマの編集
+## テーマ編集
 
-```
-open $(bundle show minima)
-```
+- `open $(bundle show minima)` の内容をリポジトリのディレクトリにコピーする。
+- `_config.yml` から `theme: minima` を削る。
+- 動作確認をローカルで行いながら、HTMLやCSSを編集する。
 
-の内容をリポジトリのディレクトリにコピーする。
+## 所感
 
+- テーマいじりはAtomが便利
+- minimaデフォルトから要らないものを削ったらイイ感じになった
+  - 本リポジトリのコミットログを参照のこと
 
 ## 参考文献
 
