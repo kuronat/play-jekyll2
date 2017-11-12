@@ -7,7 +7,7 @@ date:   2017-11-12 00:49:12 +0900
 ## はじめに
 GitHub Pagesは、リポジトリ内にHTMLコンテンツ(またはJekyllプロジェクト)を設置すると静的サイトを公開できるという、GitHubのいち機能である。
 
-- `yourid.github.io` リポジトリで用意したGitHub Pagesは `http://yourid.github.io` に公開される。ここで `http://yourid.github.io` をUser siteと呼ぶ。
+- `yourid/yourid.github.io` リポジトリで用意したGitHub Pagesは `http://yourid.github.io` に公開される。ここで `http://yourid.github.io` をUser siteと呼ぶ。
 - `yourid/reponame` リポジトリで用意したGitHub Pagesは `http://yourid.github.io/reponame` に公開される。ここで `http://yourid.github.io/reponame` を `yourid/reponame` のProject siteと呼ぶ。
 
 今回は Project site としてJekyllでブログを作成してみる。
@@ -48,6 +48,7 @@ baseurl: /play-jekyll2
 ## push
 
 あらかじめGitHubリポジトリの設定で、GitHub Pagesを有効化する(今回はmasterブランチとして有効化した)。
+
 リポジトリにコミットされるごとに、JekyllのビルドをGitHub側が行ってくれて便利である。
 
 ```
